@@ -1,0 +1,120 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#root {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(to bottom, #396b71, #4c8f96, #d0f0f5);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 70px;
+  background-color: #2ca7a7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 25px;
+  border-radius: 0 10px 10px 0;
+  height: 100vh;
+}
+
+.sidebar img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Conteúdo principal */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #2d5c5c;
+  padding-left: 10px;
+}
+
+/* Painel com fundo verde-água claro */
+.panel {
+  background-color: #7bb6ba;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* Grid com 5 colunas fixas */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* Card */
+.card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card button {
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #2ca7a7;
+  cursor: pointer;
+}
+
+.card p {
+  margin-top: 12px;
+  font-weight: 500;
+  color: #444;
+}
+.card button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.card button.btn-on svg {
+  stroke: #2ca7a7;
+  fill: #2ca7a7;
+}
+
+.card button.btn-off svg {
+  stroke: #999;
+  fill: none;
+}
+
+.card button:hover {
+  transform: scale(1.1);
+}
